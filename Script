@@ -1,53 +1,109 @@
-local gui = require("gui")
+-- Создаем главное окно
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "MainWindow"
+screenGui.Parent = game.Players.LocalPlayer.PlayerGui
 
+-- Создаем панель для кнопок
+local buttonPanel = Instance.new("Frame")
+buttonPanel.Name = "ButtonPanel"
+buttonPanel.Size = UDim2.new(1, 0, 1, 0)
+buttonPanel.BackgroundColor3 = Color3.new(1, 1, 1)
+buttonPanel.Parent = screenGui
 
-local mainWindow = gui.Window.create("Главное окно", 400, 300)
+-- Создаем кнопки
+local button1 = Instance.new("TextButton")
+button1.Name = "Button1"
+button1.Position = UDim2.new(0.125, 0, 0.1667, 0)
+button1.Size = UDim2.new(0.25, 0, 0.1667, 0)
+button1.Text = "Kaiser"
+button1.BackgroundColor3 = Color3.new(1, 0, 0)
+button1.Parent = buttonPanel
 
+local button2 = Instance.new("TextButton")
+button2.Name = "Button2"
+button2.Position = UDim2.new(0.5, 0, 0.1667, 0)
+button2.Size = UDim2.new(0.25, 0, 0.1667, 0)
+button2.Text = "NEL Isagi"
+button2.BackgroundColor3 = Color3.new(1, 0, 0)
+button2.Parent = buttonPanel
 
-local buttonPanel = gui.Panel.create(mainWindow, 0, 0, 400, 300)
+local button3 = Instance.new("TextButton")
+button3.Name = "Button3"
+button3.Position = UDim2.new(0.875, 0, 0.1667, 0)
+button3.Size = UDim2.new(0.25, 0, 0.1667, 0)
+button3.Text = "Sae"
+button3.BackgroundColor3 = Color3.new(1, 0, 0)
+button3.Parent = buttonPanel
 
+local button4 = Instance.new("TextButton")
+button4.Name = "Button4"
+button4.Position = UDim2.new(0.125, 0, 0.5, 0)
+button4.Size = UDim2.new(0.25, 0, 0.1667, 0)
+button4.Text = "Don Lorenzo"
+button4.BackgroundColor3 = Color3.new(1, 0, 0)
+button4.Parent = buttonPanel
 
-local button1 = gui.Button.create(buttonPanel, 50, 50, 100, 30, "Kaiser")
-local button2 = gui.Button.create(buttonPanel, 160, 50, 100, 30, "NEL Isagi")
-local button3 = gui.Button.create(buttonPanel, 270, 50, 100, 30, "Don Lorenzo")
-local button4 = gui.Button.create(buttonPanel, 50, 90, 100, 30, "Sae")
-local button5 = gui.Button.create(buttonPanel, 160, 90, 100, 30, "Kunigami")
-local button6 = gui.Button.create(buttonPanel, 270, 90, 100, 30, "Rin")
-local button7 = gui.Button.create(buttonPanel, 50, 130, 100, 30, "Shidou")
-local button8 = gui.Button.create(buttonPanel, 160, 130, 100, 30, "Yukimiya")
+local button5 = Instance.new("TextButton")
+button5.Name = "Button5"
+button5.Position = UDim2.new(0.5, 0, 0.5, 0)
+button5.Size = UDim2.new(0.25, 0, 0.1667, 0)
+button5.Text = "Kunigami"
+button5.BackgroundColor3 = Color3.new(1, 0, 0)
+button5.Parent = buttonPanel
 
+local button6 = Instance.new("TextButton")
+button6.Name = "Button6"
+button6.Position = UDim2.new(0.875, 0, 0.5, 0)
+button6.Size = UDim2.new(0.25, 0, 0.1667, 0)
+button6.Text = "Shidou"
+button6.BackgroundColor3 = Color3.new(1, 0, 0)
+button6.Parent = buttonPanel
 
-button1.onClick = function()
+local button7 = Instance.new("TextButton")
+button7.Name = "Button7"
+button7.Position = UDim2.new(0.125, 0, 0.8333, 0)
+button7.Size = UDim2.new(0.25, 0, 0.1667, 0)
+button7.Text = "Rin"
+button7.BackgroundColor3 = Color3.new(1, 0, 0)
+button7.Parent = buttonPanel
+
+local button8 = Instance.new("TextButton")
+button8.Name = "Button8"
+button8.Position = UDim2.new(0.5, 0, 0.8333, 0)
+button8.Size = UDim2.new(0.25, 0, 0.1667, 0)
+button8.Text = "Aiku"
+button8.BackgroundColor3 = Color3.new(1, 0, 0)
+button8.Parent = buttonPanel
+
+-- Добавляем обработчики событий для кнопок
+button1.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.PlayerStats.Style.Value = "Kaiser"
-end
+end)
 
-button2.onClick = function()
+button2.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.PlayerStats.Style.Value = "NEL Isagi"
-end
+end)
 
-button3.onClick = function()
-    game.Players.LocalPlayer.PlayerStats.Style.Value = "Don Lorenzo"
-end
-
-button4.onClick = function()
+button3.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.PlayerStats.Style.Value = "Sae"
-end
+end)
 
-button5.onClick = function()
-    game.Players.LocalPlayer.PlayerStats.Style.Value = "Kunigami" 
-end
+button4.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Don Lorenzo"
+end)
 
-button6.onClick = function()
-    game.Players.LocalPlayer.PlayerStats.Style.Value = "Rin"
-end
+button5.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Kunigami"
+end)
 
-button7.onClick = function()
+button6.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.PlayerStats.Style.Value = "Shidou"
-end
+end)
 
-button8.onClick = function()
-    game.Players.LocalPlayer.PlayerStats.Style.Value = "Yukimiya"
-end
+button7.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Rin"
+end)
 
-
-mainWindow:show()
+button8.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Aiku"
+end)
