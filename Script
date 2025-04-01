@@ -6,7 +6,7 @@ screenGui.Parent = game.Players.LocalPlayer.PlayerGui
 -- Создаем панель для кнопок
 local buttonPanel = Instance.new("Frame")
 buttonPanel.Name = "ButtonPanel"
-buttonPanel.Size = UDim2.new(1, 0, 1, 0)
+buttonPanel.Size = UDim2.new(1 / 3, 0, 1 / 3, 0)
 buttonPanel.BackgroundColor3 = Color3.new(1, 1, 1)
 buttonPanel.Parent = screenGui
 
