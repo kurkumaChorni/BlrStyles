@@ -1,16 +1,16 @@
--- Создаем главное окно
+
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "MainWindow"
 screenGui.Parent = game.Players.LocalPlayer.PlayerGui
 
--- Создаем панель для кнопок
+
 local buttonPanel = Instance.new("Frame")
 buttonPanel.Name = "ButtonPanel"
 buttonPanel.Size = UDim2.new(1 / 3, 0, 1 / 3, 0)
 buttonPanel.BackgroundColor3 = Color3.new(1, 1, 1)
 buttonPanel.Parent = screenGui
 
--- Создаем кнопки
+
 local button1 = Instance.new("TextButton")
 button1.Name = "Button1"
 button1.Position = UDim2.new(0.125, 0, 0.1667, 0)
@@ -75,7 +75,7 @@ button8.Text = "Aiku"
 button8.BackgroundColor3 = Color3.new(1, 0, 0)
 button8.Parent = buttonPanel
 
--- Добавляем обработчики событий для кнопок
+
 button1.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.PlayerStats.Style.Value = "Kaiser"
 end)
