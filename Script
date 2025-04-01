@@ -1,0 +1,53 @@
+local gui = require("gui")
+
+
+local mainWindow = gui.Window.create("Главное окно", 400, 300)
+
+
+local buttonPanel = gui.Panel.create(mainWindow, 0, 0, 400, 300)
+
+
+local button1 = gui.Button.create(buttonPanel, 50, 50, 100, 30, "Kaiser")
+local button2 = gui.Button.create(buttonPanel, 160, 50, 100, 30, "NEL Isagi")
+local button3 = gui.Button.create(buttonPanel, 270, 50, 100, 30, "Don Lorenzo")
+local button4 = gui.Button.create(buttonPanel, 50, 90, 100, 30, "Sae")
+local button5 = gui.Button.create(buttonPanel, 160, 90, 100, 30, "Kunigami")
+local button6 = gui.Button.create(buttonPanel, 270, 90, 100, 30, "Rin")
+local button7 = gui.Button.create(buttonPanel, 50, 130, 100, 30, "Shidou")
+local button8 = gui.Button.create(buttonPanel, 160, 130, 100, 30, "Yukimiya")
+
+
+button1.onClick = function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Kaiser"
+end
+
+button2.onClick = function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "NEL Isagi"
+end
+
+button3.onClick = function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Don Lorenzo"
+end
+
+button4.onClick = function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Sae"
+end
+
+button5.onClick = function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Kunigami" 
+end
+
+button6.onClick = function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Rin"
+end
+
+button7.onClick = function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Shidou"
+end
+
+button8.onClick = function()
+    game.Players.LocalPlayer.PlayerStats.Style.Value = "Yukimiya"
+end
+
+
+mainWindow:show()
